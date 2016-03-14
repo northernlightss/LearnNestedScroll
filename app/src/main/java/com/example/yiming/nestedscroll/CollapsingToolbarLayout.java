@@ -156,7 +156,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
 
     // Add an OnOffsetChangedListener if possible
     final ViewParent parent = getParent();
-    if (parent instanceof android.support.design.widget.AppBarLayout) {
+    if (parent instanceof AppBarLayout) {
       if (mOnOffsetChangedListener == null) {
         mOnOffsetChangedListener = new OffsetUpdateListener();
       }
@@ -171,7 +171,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
   protected void onDetachedFromWindow() {
     // Remove our OnOffsetChangedListener if possible and it exists
     final ViewParent parent = getParent();
-    if (mOnOffsetChangedListener != null && parent instanceof android.support.design.widget.AppBarLayout) {
+    if (mOnOffsetChangedListener != null && parent instanceof AppBarLayout) {
       ((AppBarLayout) parent).removeOnOffsetChangedListener(mOnOffsetChangedListener);
     }
 

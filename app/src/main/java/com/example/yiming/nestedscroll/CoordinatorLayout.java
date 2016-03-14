@@ -371,6 +371,11 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
     }
   }
 
+  @Override
+  public boolean dispatchTouchEvent(MotionEvent ev) {
+    return super.dispatchTouchEvent(ev);
+  }
+
   private boolean performIntercept(MotionEvent ev, final int type) {
     boolean intercepted = false;
     boolean newBlock = false;

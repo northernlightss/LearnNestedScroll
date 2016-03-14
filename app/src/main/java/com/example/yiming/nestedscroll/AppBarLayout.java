@@ -465,7 +465,6 @@ public class AppBarLayout extends LinearLayout {
 
   public static class LayoutParams extends LinearLayout.LayoutParams {
 
-    /** @hide */
     @IntDef(flag=true, value={
         SCROLL_FLAG_SCROLL,
         SCROLL_FLAG_EXIT_UNTIL_COLLAPSED,
